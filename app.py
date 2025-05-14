@@ -426,7 +426,7 @@ import pandas as pd
 from flask_cors import CORS
 app = Flask(__name__)
 # CORS(app)
-CORS(app, resources={r"/predict": {"origins": "https://voiture-prediction.vercel.app/"}})
+CORS(app, resources={r"/predict": {"origins": "https://voiture-prediction.vercel.app"}})
 # 🔁 Chargement du modèle et du préprocesseur
 model = joblib.load('xgb_model.pkl')
 preprocessor = joblib.load('preprocessor.pkl')
